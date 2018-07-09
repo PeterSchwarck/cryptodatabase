@@ -25,7 +25,7 @@ SECRET_KEY = '!_@k%yt%bd^0+-vlfr+ba-kqr^q1$4xq9mze1wpn(i#sp=%t$q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://final-project-peterschwarck.c9users.io', 'https://projectone-gcarlos456.c9users.io']
+ALLOWED_HOSTS = ['final-project-backend-peterschwarck.c9users.io', 'projectone-gcarlos456.c9users.io']
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'cryptocurrency',
 ]
 
 MIDDLEWARE = [
@@ -75,11 +77,14 @@ WSGI_APPLICATION = 'final_project_backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'c9',
+        'USER': 'peterschwarck',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
