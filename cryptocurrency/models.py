@@ -1,5 +1,6 @@
 from django.db import models
 from rest_framework import serializers
+<<<<<<< HEAD
 # Create your models here.
 
 class Coin(models.Model):
@@ -33,3 +34,11 @@ class SessionSerializer(serializers.ModelSerializer):
         model = Session
         fields = ('id', 'email', 'phone')
 # Create your models here.
+=======
+
+class Notification(models.Modal):
+    id = models.AutoField(primary_key=True)
+    currency = models.CharField(max_length = 7)
+    
+    
+>>>>>>> 936c49e3c4e8e8b30c2112f593e5fe596b6d3d3b
